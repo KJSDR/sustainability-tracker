@@ -23,8 +23,10 @@ const App = () => {
   };
 
   const checkLevelUp = () => {
-    if (points >= level * 100) {
+    const pointsNeededForNextLevel = level * 100;
+    if (points >= pointsNeededForNextLevel) {
       setLevel(level + 1);
+      setPoints(points - pointsNeededForNextLevel); // Reset points for the new level
       setCoins(coins + 50); // Example: reward 50 coins for leveling up
     }
   };
