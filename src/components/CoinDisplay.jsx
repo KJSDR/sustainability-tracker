@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CoinDisplay = ({ coins }) => (
-  <div className="text-center p-4 bg-green-200 border border-green-300 rounded-md shadow-sm">
+  <div className="text-center p-4 bg-green-900 border border-green-950 rounded-md shadow-sm">
     Coins: {coins}
   </div>
 );
