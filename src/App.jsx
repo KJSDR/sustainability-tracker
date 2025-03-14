@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ProgressBar from './components/ProgressBar';
 import ActivityInput from './components/ActivityInput';
 import ActivityLog from './components/ActivityLog';
-import Plant from './components/Plant';
 import CoinDisplay from './components/CoinDisplay';
 import Shop from './components/Shop';
 import Background from './components/Background';
@@ -41,14 +40,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row app-container relative">
-      <div className="w-full lg:w-1/4 mb-4 lg:mb-0 p-4 bg-opacity-90 rounded-lg shadow-lg">
+      <div className="w-full lg:w-1/3 mb-4 lg:mb-0 p-4 rounded-lg shadow-lg">
         <ActivityInput addActivity={addActivity} />
-        <ActivityLog activities={activities} />
       </div>
-      <div className="w-full lg:w-1/2 flex items-center justify-center mb-4 lg:mb-0 p-4 bg-opacity-90 rounded-lg shadow-lg">
-        <Plant level={level} />
-      </div>
-      <div className="w-full lg:w-1/4 p-4 bg-opacity-90 rounded-lg shadow-lg flex items-center justify-center">
+      <div className="w-full lg:w-1/3 p-4 rounded-lg shadow-lg flex flex-col items-center justify-center">
         <CoinDisplay coins={coins} />
         <img
           src="src/assets/panda.png" // Update the path as needed
@@ -56,6 +51,9 @@ const App = () => {
           className="w-32 h-32 object-contain cursor-pointer mt-4"
           onClick={() => setIsShopOpen(true)}
         />
+      </div>
+      <div className="w-full lg:w-1/3 p-4 rounded-lg shadow-lg overflow-y-auto max-h-96 order-first lg:order-last">
+        <ActivityLog activities={activities} />
       </div>
       <ProgressBar points={points} level={level} />
       <Background backgroundItems={backgroundItems} />

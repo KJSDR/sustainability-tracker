@@ -10,7 +10,7 @@ const ActivityInput = ({ addActivity }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4 p-4 bg-green-700 bg-opacity-90 rounded-lg shadow-lg">
+    <form onSubmit={handleSubmit} className="mb-4 p-4 bg-green-700/50 bg-opacity-90 rounded-lg shadow-lg">
       <input
         type="text"
         value={activity}
@@ -20,7 +20,7 @@ const ActivityInput = ({ addActivity }) => {
       />
       <button
         type="submit"
-        className="mt-2 w-full bg-green-950 text-white p-2 rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+        className="mt-2 w-full bg-green-950/50 text-white p-2 rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
       >
         Add Activity
       </button>
