@@ -5,7 +5,7 @@ const Header = () => {
     <header className="flex justify-between items-center mb-8">
       <div>
         <h1 className="text-4xl font-bold text-white mb-2">Green Guardian</h1>
-        <p className="text-green-200 text-lg">Track your sustainable living journey</p>
+        <p className="text-white text-lg">Track your sustainable living journey</p>
       </div>
       <div className="hidden md:block">
         <span className="flex items-center">
